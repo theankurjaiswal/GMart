@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>GMart - Login</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	
+</script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+	
+</script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	
+</script>
+
+<script>
+	$(function() {
+		$('[data-toggle="popover"]').popover()
+	})
+</script>
+
+<style type="text/css">
+.navbar-brand {
+	background-color: lightgreen;
+	padding: 5px 20px 5px 20px;
+	letter-spacing: 0.08cm;
+}
+</style>
+
+<style type="text/css">
+  
+#login {
+	text-align: center;
+	margin: 20px 350px 20px 350px;
+	padding: 0px 150px 0px 150px;
+	border-radius: 50px;
+}
+
+body {
+	background-image: url("images/home/normal.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.text-primary {
+	font-size: large;
+}
+
+.text-danger {
+	font-size: large;
+}
+
+.text {
+	color: white;
+	background-color: navy;
+	border-radius: 20px;
+	padding: 10px 20px 10px 20px;
+}
+
+.col-sm-10{
+
+    margin-left: 30px;
+
+}
+</style>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">GMart</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="nav nav-pills nav-fill">
+				<li class="nav-item active"><a class="nav-link"
+					href="index.html">Home <span class="sr-only">(current)</span>
+				</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="aboutus.html">About
+						Us</a></li>
+
+				<li class="nav-item"><a class="nav-link"
+					href="storelocator.html">Store Locator</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="contactus.html">Contact
+						Us</a></li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><input class="form-control mr-sm-2"
+					type="search" placeholder="Search" aria-label="Search"></li>
+
+				<li class="nav-item">&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><button
+						class="btn btn-outline-success my-2 my-sm-0"
+						class="btn btn-lg btn-danger" data-toggle="popover"
+						data-placement="bottom" title="Search items"
+						data-content="In future, this button will work" type="button">Search</button>
+				</li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="login" class="alert alert-light" role="alert">
+		<form action="login" method="get">
+			<br>
+			<h2 class="text">Login into account</h2>
+			<br>
+			<div class="col-auto">
+				<label for="inputEmail4" class="text-primary">Email address</label>
+				<div class="input-group mb-2">
+					<div class="input-group-prepend">
+						<div class="input-group-text">@</div>
+					</div>
+					<input type="email" name="email" class="form-control"
+						id="inlineFormInputGroup" placeholder="Enter your email address">
+				</div>
+			</div>
+			<br>
+			<div class="col-auto">
+				<label for="inputPassword4" class="text-primary">Password</label>
+				<div class="input-group mb-2">
+					<input type="password" name="password" class="form-control"
+						id="inlineFormInputGroup" placeholder="Enter your password">
+				</div>
+			</div>
+			<br>
+			<div class="col-auto">
+				<div class="col-sm-10">
+					<button type="submit" class="btn btn-primary">Login here</button>
+				</div>
+			</div>
+
+		</form>
+		<br> <br>
+		<form action="forgotpassword.html">
+
+			<label for="inputForgot4" class="text-danger">Forgot
+				password?</label> &nbsp;&nbsp;
+
+			<button type="submit" class="btn btn-primary">Reset password
+				here</button>
+
+		</form>
+		<br>
+		<form action="register.html">
+
+			<label for="inputRegister4" class="text-danger">Not
+				registered?</label> &nbsp;&nbsp;
+
+			<button type="submit" class="btn btn-primary">Register here</button>
+
+		</form>
+		<br>
+	</div>
+
+</body>
+</html>
