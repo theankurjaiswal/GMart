@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>GMart - Store Locator</title>
+
+<script>
+	$(function() {
+		$('[data-toggle="popover"]').popover()
+	})
+</script>
+
+<style type="text/css">
+.navbar-brand {
+	background-color: lightgreen;
+	padding: 5px 20px 5px 20px;
+	letter-spacing: 0.08cm;
+}
+</style>
+
+<style type="text/css">
+
+h1 {
+	color: purple;
+	background-color: black;
+	color: yellow;
+	padding: 10px 10px;
+	margin: 10px 125px 50px 125px;
+}
+
+
+
+#g1 {
+	display: block;
+	color: blue;
+	text-align:center;
+	font-size: x-large;
+	margin: 0px 500px 0px 500px;
+	padding: 20px 30px 20px 30px;
+}
+
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">GMart</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="nav nav-pills nav-fill">
+				<li class="nav-item active"><a class="nav-link"
+					href="index.html">Home <span class="sr-only">(current)</span>
+				</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="aboutus.html">About
+						Us</a></li>
+
+				<li class="nav-item"><a class="nav-link"
+					href="storelocator.html">Store Locator</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="contactus.html">Contact
+						Us</a></li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><input class="form-control mr-sm-2"
+					type="search" placeholder="Search" aria-label="Search"></li>
+
+				<li class="nav-item">&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><button
+						class="btn btn-outline-success my-2 my-sm-0"
+						class="btn btn-lg btn-danger" data-toggle="popover"
+						data-placement="bottom" title="Search items"
+						data-content="In future, this button will work" type="button">Search</button>
+				</li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><a class="nav-link" href="register.jsp">Register</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<h1>Stores near you</h1>
+	<br>
+	<div class="alert alert-warning" role="alert" id="g1">Mumbai stores</div>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Dadar, Mumbai
+				</div>
+				<div class="alert alert-success" role="alert">Address : Cts No
+					5789, Natraj Premium, Old Bombay Highway, Next To ERE, Dadar,
+					Mumbai, Maharashtra, 411012</div>
+			</div>
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Bandra, Mumbai
+				</div>
+				<div class="alert alert-success" role="alert">Address : Shop
+					No 57 To 13, 1St Floor, Cts No 42, Narayan Road, Near Meera
+					Society, Bandra, Mumbai, Maharashtra, 411037</div>
+			</div>
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Andheri, Mumbai
+				</div>
+				<div class="alert alert-success" role="alert">Address : Survey
+					No 89/3 And 16/4, Mohite Paradise, Shiva Nagar, Near Mcdonalds,
+					Andheri, Mumbai, Maharashtra, 411051</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="alert alert-warning" role="alert" id="g1">Kolkata stores</div>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Esplanade, Kolkata
+				</div>
+				<div class="alert alert-success" role="alert">Address : Shop
+					No 7, Metropolitan Building, Jawahar Lal Nehru Road, Near
+					Esplanade, Esplanade, Kolkata, West Bengal, 700013</div>
+			</div>
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Buddha Vihar, Gorakhpur
+				</div>
+				<div class="alert alert-success" role="alert">Address : Amtala
+					Bazar, Metropolitan Building, Nibarandutta Road, Borhanpur village,
+					Amtala, Kolkata, West Bengal, 743503</div>
+			</div>
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Kharagpur, West Midnapore
+				</div>
+				<div class="alert alert-success" role="alert">Address : Ward
+					No 16 Malancha Road, Opposite Atulmoni, Nehrilu road, Kharagpur West, Midnapore,
+					West Bengal, 721301</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="alert alert-warning" role="alert" id="g1">Pune stores</div>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Dapodi, Pune
+				</div>
+				<div class="alert alert-success" role="alert">Address : Cts No
+					1537, Bhakthi Premium, Old Bombay Pune Highway, Next To CME,
+					Dapodi, Pune, Maharashtra, 411012</div>
+			</div>
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Gultekdi, Pune
+				</div>
+				<div class="alert alert-success" role="alert">Address : Shop
+					No 11, 1St Floor, Kumar Pacific, Cts No 43, Shankar Seth Road,
+					Meera Society, Pune, Maharashtra, 411037</div>
+			</div>
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Sinhgad, Pune
+				</div>
+				<div class="alert alert-success" role="alert">Address : Survey
+					No 16/4, Mohite Paradise, Hingne, Anand Nagar, Near Mcdonalds,
+					Sinhgad, Pune, Maharashtra, 411051</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<div class="alert alert-warning" role="alert" id="g1">Bengaluru stores</div>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Bengaluru North, Bengaluru
+				</div>
+				<div class="alert alert-success" role="alert">Address : Plot
+					587, Basement To 3Rd Floor, Sapphire Mall, Vidyaranyapura Road, ranyapura,
+					Bengaluru, Bengaluru, Karnataka, 560097</div>
+			</div>
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Kalyan Nagar, Bengaluru
+				</div>
+				<div class="alert alert-success" role="alert">Address : 417/A,
+					br 3Rd Block, Kammanahalli, Kacharakanahalli, Baswadi, DBS Bank,
+					Kalyan Nagar, Bengaluru, Karnataka, 560043</div>
+			</div>
+			<div class="col-sm">
+				<div class="alert alert-primary" role="alert">
+					GMart <br> Yashwantapur, Bengaluru
+				</div>
+				<div class="alert alert-success" role="alert">Address : No
+					9/36, Vaishnavi Sapphire Mall, Metropolitan Building, Tumkur Road,
+					Yashwantapur, Bengaluru, Karnataka, 560022</div>
+			</div>
+		</div>
+	</div>
+    <br><br>
+	<blockquote class="blockquote text-center">
+		<footer class="blockquote-footer">
+			Copyright 2023 All right reserved <br> All data stored and
+			managed by Ankur Technology Solutions Private Limited
+		</footer>
+	</blockquote>
+
+</body>
+</html>
