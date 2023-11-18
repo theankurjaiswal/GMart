@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User - Shopping</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	
+</script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+	
+</script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	
+</script>
+
+<script type="text/javascript">
+window.history.forward();
+function noBack() {
+    window.history.forward();
+}
+</script>
+
+<script>
+	$(function() {
+		$('[data-toggle="popover"]').popover()
+	})
+</script>
+
+<script type="text/javascript">
+	$('#myModal').on('shown.bs.modal', function() {
+		$('#myInput').trigger('focus');
+	})
+</script>
+
+<style type="text/css">
+.navbar-brand {
+	background-color: lightgreen;
+	padding: 5px 15px 5px 15px;
+	letter-spacing: 0.08cm;
+}
+
+#c1 {
+	color: green;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+h5{
+    text-align: center;
+}
+
+#l1 {
+    margin-left: 190px;
+	border-color: blue;
+	padding: 10px 10px 10px 10px;
+	background-color: blue;
+	border-radius: 10px;
+	color: white;
+}
+</style>
+
+<script type="text/javascript">
+	function incrementValue1() {
+		var value = parseInt(document.getElementById('8').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value < 10) {
+			value++;
+			document.getElementById('8').value = value;
+			total = parseInt(document.getElementById('8').value * 8);
+			document.getElementById('t1').innerHTML = "Total : Rs " + total;
+		}
+	}
+	function decrementValue1() {
+		var value = parseInt(document.getElementById('8').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value > 0) {
+			value--;
+			document.getElementById('8').value = value;
+			total = parseInt(document.getElementById('8').value * 8);
+			document.getElementById('t1').innerHTML = "Total : Rs " + total;
+		}
+
+	}
+
+	function incrementValue2() {
+		var value = parseInt(document.getElementById('5').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value < 10) {
+			value++;
+			document.getElementById('5').value = value;
+			total = parseInt(document.getElementById('5').value * 5);
+			document.getElementById('t2').innerHTML = "Total : Rs " + total;
+		}
+	}
+	function decrementValue2() {
+		var value = parseInt(document.getElementById('5').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value > 0) {
+			value--;
+			document.getElementById('5').value = value;
+			total = parseInt(document.getElementById('5').value * 5);
+			document.getElementById('t2').innerHTML = "Total : Rs " + total;
+		}
+
+	}
+
+	function incrementValue3() {
+		var value = parseInt(document.getElementById('4').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value < 10) {
+			value++;
+			document.getElementById('4').value = value;
+			total = parseInt(document.getElementById('4').value * 4);
+			document.getElementById('t3').innerHTML = "Total : Rs " + total;
+		}
+	}
+	function decrementValue3() {
+		var value = parseInt(document.getElementById('4').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value > 0) {
+			value--;
+			document.getElementById('4').value = value;
+			total = parseInt(document.getElementById('4').value * 4);
+			document.getElementById('t3').innerHTML = "Total : Rs " + total;
+		}
+
+	}
+
+	function incrementValue4() {
+		var value = parseInt(document.getElementById('9').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value < 10) {
+			value++;
+			document.getElementById('9').value = value;
+			total = parseInt(document.getElementById('9').value * 9);
+			document.getElementById('t4').innerHTML = "Total : Rs " + total;
+		}
+	}
+	function decrementValue4() {
+		var value = parseInt(document.getElementById('9').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value > 0) {
+			value--;
+			document.getElementById('9').value = value;
+			total = parseInt(document.getElementById('9').value * 9);
+			document.getElementById('t4').innerHTML = "Total : Rs " + total;
+		}
+
+	}
+
+	function incrementValue5() {
+		var value = parseInt(document.getElementById('7').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value < 10) {
+			value++;
+			document.getElementById('7').value = value;
+			total = parseInt(document.getElementById('7').value * 7);
+			document.getElementById('t5').innerHTML = "Total : Rs " + total;
+		}
+	}
+	function decrementValue5() {
+		var value = parseInt(document.getElementById('7').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value > 0) {
+			value--;
+			document.getElementById('7').value = value;
+			total = parseInt(document.getElementById('7').value * 7);
+			document.getElementById('t5').innerHTML = "Total : Rs " + total;
+		}
+
+	}
+
+	function incrementValue6() {
+		var value = parseInt(document.getElementById('15').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value < 10) {
+			value++;
+			document.getElementById('15').value = value;
+			total = parseInt(document.getElementById('15').value * 15);
+			document.getElementById('t6').innerHTML = "Total : Rs " + total;
+		}
+	}
+	function decrementValue6() {
+		var value = parseInt(document.getElementById('15').value, 10);
+		var total = 1;
+		value = isNaN(value) ? 0 : value;
+		if (value > 0) {
+			value--;
+			document.getElementById('15').value = value;
+			total = parseInt(document.getElementById('15').value * 15);
+			document.getElementById('t6').innerHTML = "Total : Rs " + total;
+		}
+
+	}
+
+	function cart() {
+
+		var item = [ Number(document.getElementById('8').value),
+				Number(document.getElementById('5').value),
+				Number(document.getElementById('4').value),
+				Number(document.getElementById('9').value),
+				Number(document.getElementById('7').value),
+				Number(document.getElementById('15').value) ];
+
+		var total = [ document.getElementById('8').value * 8,
+				document.getElementById('5').value * 5,
+				document.getElementById('4').value * 4,
+				document.getElementById('9').value * 9,
+				document.getElementById('7').value * 7,
+				document.getElementById('15').value * 15 ];
+
+		var countItem = 0;
+		var totalPrice = 0;
+
+		for (var i = 0; i < item.length; i++) {
+			countItem += item[i];
+		}
+
+		for (var j = 0; j < total.length; j++) {
+			totalPrice += total[j];
+		}
+
+		document.getElementById('totalItem').innerHTML = "TOTAL CART ITEM : "
+				+ countItem;
+		document.getElementById('totalPrice').innerHTML = "TOTAL PRICE (Rs) : "
+				+ totalPrice.toFixed(2);
+
+	}
+
+	function pay() {
+		var item = [ Number(document.getElementById('8').value),
+				Number(document.getElementById('5').value),
+				Number(document.getElementById('4').value),
+				Number(document.getElementById('9').value),
+				Number(document.getElementById('7').value),
+				Number(document.getElementById('15').value) ];
+
+		var total = [ document.getElementById('8').value * 8,
+				document.getElementById('5').value * 5,
+				document.getElementById('4').value * 4,
+				document.getElementById('9').value * 9,
+				document.getElementById('7').value * 7,
+				document.getElementById('15').value * 15 ];
+		var countItem = 0;
+		var totalPrice = 0;
+
+		for (var i = 0; i < item.length; i++) {
+			countItem += item[i];
+		}
+
+		for (var j = 0; j < total.length; j++) {
+			totalPrice += total[j];
+		}
+		if (countItem > 0 && totalPrice > 0) {
+			window.location.replace("paymentpage.jsp?totalPrice=" + totalPrice
+					+ "&countItem=" + countItem);
+		} else {
+			window.alert("Please add items in cart");
+		}
+
+	}
+</script>
+
+<style type="text/css">
+body {
+	background-color: #FDF5E6;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li {
+	float: left;
+}
+
+.g1 {
+	display: block;
+	border: 1px solid black;
+	margin: 10px 0px 40px 90px;
+}
+
+.g2 {
+	display: block;
+	color: #666;
+	margin: 45px 0px 0px -55px;
+}
+
+.g3 {
+	display: inline-block;
+	border: 1px solid black;
+	text-align: center;
+	margin: 40px 2px 0px 6px;
+	padding: 10px 15px 10px 15px;
+}
+
+.g4 {
+	display: block;
+	color: #666;
+	border: 1px solid black;
+	padding: 0px 15px 0px 15px;
+	margin: 42px 40px 0px 0px;
+	background-color: white;
+}
+
+.g5 {
+	display: block;
+	border: 1px solid black;
+	margin: 10px 0px 40px 10px;
+}
+
+.g6 {
+	display: block;
+	color: #666;
+	margin: 45px 5px 0px -65px;
+}
+
+.g7 {
+	display: inline-block;
+	border: 1px solid black;
+	text-align: center;
+	margin: 40px 10px 0px 0px;
+	padding: 10px 15px 10px 15px;
+}
+
+.g8 {
+	display: block;
+	color: #666;
+	border: 1px solid black;
+	padding: 0px 15px 0px 15px;
+	margin: 42px 0px 0px -10px;
+	background-color: white;
+}
+
+h1 {
+	text-align: center;
+	color: purple;
+	background-color: black;
+	color: yellow;
+	padding: 10px 10px;
+	margin: 10px 95px 50px 95px;
+}
+
+h3 {
+	margin: 0px 0px 10px 90px;
+	color: navy;
+}
+
+h4 {
+	margin: -25px 0px 10px 90px;
+	color: green;
+}
+
+h6 {
+	margin: 30px 530px 30px 530px;
+	padding: 20px 20px 20px 20px;
+	color: #F0FFFF;
+	text-align: center;
+	background-color: #006400;
+	border-radius: 20px;
+	font-size: medium;
+}
+
+#y1 {
+	margin: 15px 1000px 30px 65px;
+	padding: 10px 0px 10px 0px;
+	color: #F0FFFF;
+	text-align: center;
+	background-color: orange;
+	border-radius: 20px;
+	font-size: medium;
+}
+</style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">GMart</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="nav nav-pills nav-fill">
+				<li class="nav-item active"><a class="nav-link"
+					href="userhome.html">Home <span class="sr-only">(current)</span>
+				</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="userprofile.html">Profile</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="usershopnow.html">Shopping</a></li>
+
+				<li class="nav-item"><a class="nav-link"
+					href="userorderhistory.html">Order History</a></li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><input class="form-control mr-sm-2"
+					type="search" placeholder="Search" aria-label="Search"></li>
+
+				<li class="nav-item">&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><button
+						class="btn btn-outline-success my-2 my-sm-0"
+						class="btn btn-lg btn-danger" data-toggle="popover"
+						data-placement="bottom" title="Search items"
+						data-content="In future, this button will work" type="button">Search</button></li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><button type="button"
+						class="btn btn-primary" class="btn btn-lg btn-danger"
+						data-toggle="popover" data-placement="left" title="Notifications"
+						data-content="You have 4 notifications">
+						Notifications <span class="badge badge-light">4</span>
+					</button></li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><button type="button"
+						class="btn btn-primary" class="btn btn-lg btn-danger"
+						data-toggle="popover" data-placement="bottom" title="Messages"
+						data-content="You have 13 unread messages">
+						Messages <span class="badge badge-light">13</span>
+					</button></li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><button type="button"
+						class="btn btn-primary" data-toggle="modal"
+						data-target="#Logout">Logout</button></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Modal -->
+	<div class="modal fade" id="Logout" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Confirm Logout</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="login.html" method="get">
+
+						<h2 id="c1">
+							Say to bye, User
+						</h2>
+						<br>
+						<h5>You will need to login again for future shopping</h5>
+						<br>
+						<button type="submit" id="l1">Logout</button>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  
+	<form action="paymentpage.html">
+		<h1>Vegetables</h1>
+
+		<h3>Product &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Value
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quantity
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Product
+			&nbsp;&nbsp;&nbsp;&nbsp; Value
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Quantity
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Price</h3>
+		<ul>
+			<li class="g1"><img alt="cucumber"
+				src="cucumber.jpg" width="100cm" height="100cm">
+			</li>
+			<li class="g2">
+				<h3>8 Rs/Kg</h3>
+			</li>
+			<li>
+				<div class="container">
+					<input class="g3" type="button" onclick="decrementValue1()"
+						value="-" /> <input class="g3" type="text" name="quantity"
+						value="0" maxlength="2" max="10" size="1" id="8" /> <input
+						class="g3" type="button" onclick="incrementValue1()" value="+" />
+				</div>
+			</li>
+			<li class="g4">
+				<p id="t1">Total : Rs 0</p>
+			</li>
+			<li class="g5"><img alt="garlic"
+				src="garlic.jpg" width="100cm" height="100cm">
+			</li>
+			<li class="g6">
+				<h3>5 Rs/Kg</h3>
+			</li>
+			<li>
+				<div class="container">
+					<input class="g7" type="button" onclick="decrementValue2()"
+						value="-" /> <input class="g7" type="text" name="quantity"
+						value="0" maxlength="2" max="10" size="1" id="5" /> <input
+						class="g7" type="button" onclick="incrementValue2()" value="+" />
+				</div>
+			</li>
+			<li class="g8">
+				<p id="t2">Total : Rs 0</p>
+			</li>
+		</ul>
+		<h4>Cucumber
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Garlic</h4>
+		<ul>
+			<li class="g1"><img alt="ginger"
+				src="ginger.jpg" width="100cm" height="100cm">
+			</li>
+			<li class="g2">
+				<h3>4 Rs/Kg</h3>
+			</li>
+			<li>
+				<div class="container">
+					<input class="g3" type="button" onclick="decrementValue3()"
+						value="-" /> <input class="g3" type="text" name="quantity"
+						value="0" maxlength="2" max="10" size="1" id="4" /> <input
+						class="g3" type="button" onclick="incrementValue3()" value="+" />
+				</div>
+			</li>
+			<li class="g4">
+				<p id="t3">Total : Rs 0</p>
+			</li>
+			<li class="g5"><img alt="onion"
+				src="onion.jpg" width="100cm" height="100cm">
+			</li>
+			<li class="g6">
+				<h3>9 Rs/Kg</h3>
+			</li>
+			<li>
+				<div class="container">
+					<input class="g7" type="button" onclick="decrementValue4()"
+						value="-" /> <input class="g7" type="text" name="quantity"
+						value="0" maxlength="2" max="10" size="1" id="9" /> <input
+						class="g7" type="button" onclick="incrementValue4()" value="+" />
+				</div>
+			</li>
+			<li class="g8">
+				<p id="t4">Total : Rs 0</p>
+			</li>
+		</ul>
+		<h4>&nbsp;&nbsp;&nbsp;Ginger
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Onion</h4>
+		<ul>
+			<li class="g1"><img alt="potato"
+				src="potato.jpg" width="100cm" height="100cm">
+			</li>
+			<li class="g2">
+				<h3>7 Rs/Kg</h3>
+			</li>
+			<li>
+				<div class="container">
+					<input class="g3" type="button" onclick="decrementValue5()"
+						value="-" /> <input class="g3" type="text" name="quantity"
+						value="0" maxlength="2" max="10" size="1" id="7" /> <input
+						class="g3" type="button" onclick="incrementValue5()" value="+" />
+				</div>
+			</li>
+			<li class="g4">
+				<p id="t5">Total : Rs 0</p>
+			</li>
+			<li class="g5"><img alt="tomato"
+				src="tomato.jpg" width="100cm" height="100cm">
+			</li>
+			<li class="g6">
+				<h3>15 Rs/Kg</h3>
+			</li>
+			<li>
+				<div class="container">
+					<input class="g7" type="button" onclick="decrementValue6()"
+						value="-" /> <input class="g7" type="text" name="quantity"
+						value="0" maxlength="2" max="10" size="1" id="15" /> <input
+						class="g7" type="button" onclick="incrementValue6()" value="+" />
+				</div>
+			</li>
+			<li class="g8">
+				<p id="t6">Total : Rs 0</p>
+			</li>
+		</ul>
+		<h4>&nbsp;&nbsp;&nbsp;Potato
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Tomato</h4>
+
+		<br> <br>
+		<h6 onclick="cart()">CLICK HERE TO SEE CART</h6>
+		<br> <br> <br>
+		<h4 id="totalItem" style="color: #8B008B;">TOTAL CART ITEM :</h4>
+		<br> <br>
+		<h4 id="totalPrice" style="color: #8B008B;">TOTAL PRICE (Rs) :</h4>
+		<br> <br>
+		<h6 id="y1" onclick="pay()">PAY TO CONFIRM ORDER</h6>
+	</form>
+</body>
+</html>
