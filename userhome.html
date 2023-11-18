@@ -1,0 +1,255 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User - Home</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	
+</script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+	
+</script>
+
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	
+</script>
+
+<script type="text/javascript">
+window.history.forward();
+function noBack() {
+    window.history.forward();
+}
+</script>
+
+<script>
+	$(function() {
+		$('[data-toggle="popover"]').popover()
+	})
+</script>
+
+<script type="text/javascript">
+	$('#myModal').on('shown.bs.modal', function() {
+		$('#myInput').trigger('focus');
+	})
+</script>
+
+<style type="text/css">
+.navbar-brand {
+	background-color: lightgreen;
+	padding: 5px 15px 5px 15px;
+	letter-spacing: 0.08cm;
+}
+
+#c1 {
+	color: green;
+	text-transform: capitalize;
+	text-align: center;
+}
+
+h5{
+    text-align: center;
+}
+
+#l1 {
+    margin-left: 190px;
+	border-color: blue;
+	padding: 10px 10px 10px 10px;
+	background-color: blue;
+	border-radius: 10px;
+	color: white;
+}
+</style>
+  
+<style type="text/css">
+body {
+	background-image: url("images/userpage/pencil.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+h4 {
+	text-align: center;
+	color: teal;
+	text-transform: capitalize;
+	font-size: x-large;
+	background-color: #FFEBCD;
+	border-radius: 60px;
+	padding: 20px 15px 20px 15px;
+	margin: 0px 500px 0px 500px;
+}
+
+a {
+	text-decoration: none;
+}
+
+#g1 {
+	display: block;
+	color: blue;
+	text-align: center;
+	font-size: x-large;
+	padding: 60px 30px 60px 30px;
+	border-radius: 50px;
+}
+</style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">GMart</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="nav nav-pills nav-fill">
+				<li class="nav-item active"><a class="nav-link"
+					href="userhome.jsp">Home <span class="sr-only">(current)</span>
+				</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="userprofile.jsp">Profile</a></li>
+
+				<li class="nav-item"><a class="nav-link" href="usershopnow.jsp">Shopping</a></li>
+
+				<li class="nav-item"><a class="nav-link"
+					href="userorderhistory.jsp">Order History</a></li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><input class="form-control mr-sm-2"
+					type="search" placeholder="Search" aria-label="Search"></li>
+
+				<li class="nav-item">&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><button
+						class="btn btn-outline-success my-2 my-sm-0"
+						class="btn btn-lg btn-danger" data-toggle="popover"
+						data-placement="bottom" title="Search items"
+						data-content="In future, this button will work" type="button">Search</button></li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><button type="button"
+						class="btn btn-primary" class="btn btn-lg btn-danger"
+						data-toggle="popover" data-placement="left" title="Notifications"
+						data-content="You have 4 notifications">
+						Notifications <span class="badge badge-light">4</span>
+					</button></li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><button type="button"
+						class="btn btn-primary" class="btn btn-lg btn-danger"
+						data-toggle="popover" data-placement="bottom" title="Messages"
+						data-content="You have 13 unread messages">
+						Messages <span class="badge badge-light">13</span>
+					</button></li>
+
+				<li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+				<li class="nav-item"><button type="button"
+						class="btn btn-primary" data-toggle="modal"
+						data-target="#Logout">Logout</button></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Modal -->
+	<div class="modal fade" id="Logout" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Confirm Logout</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form action="logout" method="get">
+
+						<h2 id="c1">
+							Say to bye,
+							<%
+						out.println(session.getAttribute("name"));
+						%>
+						</h2>
+						<br>
+						<h5>You will need to login again for future shopping</h5>
+						<br>
+						<button type="submit" id="l1">Logout</button>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary"
+						data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+  
+	<%!Connection connection = null;
+	PreparedStatement ps = null;
+	ResultSet rs = null;%>
+	<br>
+	<h4>
+		Welcome
+		<%
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/grocery_store", "root", "root");
+	ps = connection.prepareStatement("select * from grocery_store.store where email=?");
+	ps.setString(1, (String) session.getAttribute("email"));
+	rs = ps.executeQuery();
+	if (rs.next()) {
+		out.println(rs.getString(1));
+	}
+	%>
+	</h4>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<div class="alert alert-success" role="alert" id="g1">
+					<a href="userprofile.jsp">Manage Profile</a>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="alert alert-success" role="alert" id="g1">
+					<a href="usershopnow.jsp">Shop Now</a>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-sm">
+				<div class="alert alert-success" role="alert" id="g1">
+					<a href="userorderhistory.jsp">Order History</a>
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="alert alert-success" role="alert" id="g1">
+					<a data-toggle="modal" data-target="#Logout">Logout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
